@@ -54,22 +54,36 @@ var olympicPictures = imageEvents(["1olympics.jpg","2olympics.jpg","3olympics.jp
 var olympicCenterView = new Destination(new google.maps.LatLng(47.709762,-123.475342),9, olympicPictures);
 var cascadesPictures = imageEvents(["1cascades.jpg","2cascades.jpg","3cascades.jpg"],"imgs/cascades");
 var cascadesCenterView = new Destination(new google.maps.LatLng(47.805776,-121.069336),9, cascadesPictures);
-var seattleCenterView2 = new Destination(seattleCenterLatLng,9);
-var imgList = imageEvents(["bumbershoot.jpg","emp.jpg","foklife.jpg","spaceNeedle.jpg"],"imgs/seattleCenter");
+var queeneAnneView = new Destination(new google.maps.LatLng(47.635182,-122.35736),9);
+var queeneAnneViewMiddle = new Destination(new google.maps.LatLng(47.635182,-122.35736),12);
+var seattleSkyline = imageEvents(['skyline1.jpg','skyline2.jpg'],'imgs/skyline');
+var queeneAnneZoom = new Destination(new google.maps.LatLng(47.635182,-122.35736),14,seattleSkyline);
+var imgList = imageEvents(["spaceNeedle.jpg","emp.jpg", "bumbershoot.jpg","foklife.jpg"],"imgs/seattleCenter");
 var spaceNeedle = new Destination(seattleCenterLatLng,14,imgList);
 var pikePlacePictures = imageEvents(['pikeplace1.jpg','pikeplace2.jpg','pikeplace3.jpg'],'imgs/pikeplace');
 var pikePlaceMarket = new Destination(new google.maps.LatLng(47.610136,-122.342057),14, pikePlacePictures);
-var garfieldHigh = new Destination(new google.maps.LatLng(47.605334,-122.301807),14);
-var universityOfWashington = new Destination(new google.maps.LatLng(47.65601,-122.30934),14);
-var ballardLocks = new Destination(new google.maps.LatLng(47.666705,-122.398068),14);
-var sayHiEvent = new ModalEvent(modal($('<img src="imgs/hi.jpg">"')));
-var nextImage = new NextImageEvent($("<p>Hey!</p>"),sayHiEvent.modal);
-var discoverParkLighthouse = new Destination(new google.maps.LatLng(47.661977,-122.435782),14);//[sayHiEvent,nextImage,sayHiEvent]);
+var garfieldPictures = imageEvents(['0garfield.jpg','brucelee1.jpg','brucelee2.jpg','0jimi.jpg','1jimi.jpg'],'imgs/garfield');
+var garfieldHigh = new Destination(new google.maps.LatLng(47.605334,-122.301807),14, garfieldPictures);
+var uwPictures = imageEvents(['0uw.jpg','1uw.jpg'],'imgs/uw');
+var universityOfWashington = new Destination(new google.maps.LatLng(47.65601,-122.30934),14,uwPictures);
+var ballardPictures = imageEvents(['0locks.jpg','1locks.jpg','2locks.jpg'],'imgs/ballardlocks');
+var ballardLocks = new Destination(new google.maps.LatLng(47.666705,-122.398068),14,ballardPictures);
+var discoveryPictures = imageEvents(['0discovery.jpg','1discovery.jpg','2discovery.jpg','3discovery.jpg'], 'imgs/discoverypark');
+var discoverParkLighthouse = new Destination(new google.maps.LatLng(47.661977,-122.435782),14, discoveryPictures);
+var cafeMoxPictures = imageEvents(['cafemox1.jpg','cafemox2.jpg','magic.jpg','warhammer1.jpg'],'imgs/cafemox');
+var cafeMoxZoomOut = new Destination(new google.maps.LatLng(47.664986,-122.380418),14);
+var cafeMoxZoomIn = new Destination(new google.maps.LatLng(47.664986,-122.380418),15,cafeMoxPictures);
+var tractorPictures = imageEvents(['outside.jpg','band.jpg','band1.jpg','swing.jpg'],'imgs/tractorTavern');
+var tractorTavern = new Destination(new google.maps.LatLng(47.665764,-122.382626),15,tractorPictures);
+var collegeInnPictures = imageEvents(['cip.jpg'],'imgs/collegeInnPub');
+var collegeInnPub = new Destination(new google.maps.LatLng(47.65544,-122.31298),15,collegeInnPictures);
 
 var events = [usaCenterView, waCenterView,seattleCenterView,olympicCenterView,
-		cascadesCenterView, seattleCenterView2, 
+		cascadesCenterView, queeneAnneView, queeneAnneViewMiddle, queeneAnneZoom, 
 		spaceNeedle, pikePlaceMarket, garfieldHigh, universityOfWashington,
-		ballardLocks, discoverParkLighthouse];
+		ballardLocks, discoverParkLighthouse,cafeMoxZoomOut,cafeMoxZoomIn,
+		tractorTavern,collegeInnPub
+		];
 
 /*
  * Creates a modal object with 
